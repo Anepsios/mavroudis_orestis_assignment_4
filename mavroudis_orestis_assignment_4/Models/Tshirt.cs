@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace mavroudis_orestis_assignment_4.Models
 {
@@ -65,7 +66,7 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public static void SortProgram()
         {
-            List<Tshirt> tshirts = Tshirt.GetTshirts(500);
+            List<Tshirt> tshirts = Tshirt.GetTshirts(5000);
 
 
             ISortStrategy strategy = new QuickSortStrategy();

@@ -11,11 +11,14 @@ namespace mavroudis_orestis_assignment_4.Models
     {
         public void SortSizeAscending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = SizeAscendingPartition(tshirts, low, high);
-            SortSizeAscending(tshirts, low, pivot - 1);
-            SortSizeAscending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = SizeAscendingPartition(tshirts, low, high);
+                SortSizeAscending(tshirts, low, pivot - 1);
+                SortSizeAscending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortSizeAscending(List<Tshirt> tshirts, int low, int high)
@@ -51,11 +54,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortSizeDescending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = SizeDescendingPartition(tshirts, low, high);
-            SortSizeDescending(tshirts, low, pivot - 1);
-            SortSizeDescending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = SizeDescendingPartition(tshirts, low, high);
+                SortSizeDescending(tshirts, low, pivot - 1);
+                SortSizeDescending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortSizeDescending(List<Tshirt> tshirts, int low, int high)
@@ -91,11 +97,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortColorAscending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = ColorAscendingPartition(tshirts, low, high);
-            SortColorAscending(tshirts, low, pivot - 1);
-            SortColorAscending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = ColorAscendingPartition(tshirts, low, high);
+                SortColorAscending(tshirts, low, pivot - 1);
+                SortColorAscending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortColorAscending(List<Tshirt> tshirts, int low, int high)
@@ -131,11 +140,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortColorDescending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = ColorDescendingPartition(tshirts, low, high);
-            SortColorDescending(tshirts, low, pivot - 1);
-            SortColorDescending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = ColorDescendingPartition(tshirts, low, high);
+                SortColorDescending(tshirts, low, pivot - 1);
+                SortColorDescending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortColorDescending(List<Tshirt> tshirts, int low, int high)
@@ -171,11 +183,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortFabricAscending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = FabricAscendingPartition(tshirts, low, high);
-            SortFabricAscending(tshirts, low, pivot - 1);
-            SortFabricAscending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = FabricAscendingPartition(tshirts, low, high);
+                SortFabricAscending(tshirts, low, pivot - 1);
+                SortFabricAscending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortFabricAscending(List<Tshirt> tshirts, int low, int high)
@@ -211,11 +226,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortFabricDescending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = FabricDescendingPartition(tshirts, low, high);
-            SortFabricDescending(tshirts, low, pivot - 1);
-            SortFabricDescending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = FabricDescendingPartition(tshirts, low, high);
+                SortFabricDescending(tshirts, low, pivot - 1);
+                SortFabricDescending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortFabricDescending(List<Tshirt> tshirts, int low, int high)
@@ -251,11 +269,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortTshirtAscending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = TshirtAscendingPartition(tshirts, low, high);
-            SortTshirtAscending(tshirts, low, pivot - 1);
-            SortTshirtAscending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = TshirtAscendingPartition(tshirts, low, high);
+                SortTshirtAscending(tshirts, low, pivot - 1);
+                SortTshirtAscending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortTshirtAscending(List<Tshirt> tshirts, int low, int high)
@@ -311,11 +332,14 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortTshirtDescending(List<Tshirt> tshirts)
         {
-            int low = 0;
-            int high = tshirts.Count - 1;
-            int pivot = TshirtDescendingPartition(tshirts, low, high);
-            SortTshirtDescending(tshirts, low, pivot - 1);
-            SortTshirtDescending(tshirts, pivot + 1, high);
+            if (tshirts.Count > 0)
+            {
+                int low = 0;
+                int high = tshirts.Count - 1;
+                int pivot = TshirtDescendingPartition(tshirts, low, high);
+                SortTshirtDescending(tshirts, low, pivot - 1);
+                SortTshirtDescending(tshirts, pivot + 1, high);
+            }
         }
 
         private void SortTshirtDescending(List<Tshirt> tshirts, int low, int high)
