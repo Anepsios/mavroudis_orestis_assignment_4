@@ -23,9 +23,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderBy(x=>x.Size).ToList();
+                strategy.SortSizeAscending(buckets[i]);
+                //buckets[i] = buckets[i].OrderBy(x=>x.Size).ToList();
             }
 
             int index = 0;
@@ -52,9 +54,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderByDescending(x => x.Size).ToList();
+                strategy.SortSizeDescending(buckets[i]);
+                //buckets[i] = buckets[i].OrderByDescending(x => x.Size).ToList();
             }
 
             int index = 0;
@@ -81,9 +85,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderBy(x => x.Color).ToList();
+                strategy.SortColorAscending(buckets[i]);
+                //buckets[i] = buckets[i].OrderBy(x => x.Color).ToList();
             }
 
             int index = 0;
@@ -110,9 +116,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderByDescending(x => x.Color).ToList();
+                strategy.SortColorDescending(buckets[i]);
+                //buckets[i] = buckets[i].OrderByDescending(x => x.Color).ToList();
             }
 
             int index = 0;
@@ -139,9 +147,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderBy(x => x.Fabric).ToList();
+                strategy.SortFabricAscending(buckets[i]);
+                //buckets[i] = buckets[i].OrderBy(x => x.Fabric).ToList();
             }
 
             int index = 0;
@@ -168,9 +178,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderByDescending(x => x.Fabric).ToList();
+                strategy.SortFabricDescending(buckets[i]);
+                //buckets[i] = buckets[i].OrderByDescending(x => x.Fabric).ToList();
             }
 
             int index = 0;
@@ -197,9 +209,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderBy(x => x.Size).ThenBy(y => y.Color).ThenBy(u => u.Fabric).ToList();
+                strategy.SortTshirtAscending(buckets[i]);
+                //buckets[i] = buckets[i].OrderBy(x => x.Size).ThenBy(y => y.Color).ThenBy(u => u.Fabric).ToList();
             }
 
             int index = 0;
@@ -226,9 +240,11 @@ namespace mavroudis_orestis_assignment_4.Models
                 buckets[bucket].Add(tshirts[i]);
             }
 
+            ISortStrategy strategy = new QuickSortStrategy();
             for (int i = 0; i < tshirts.Count; i++)
             {
-                buckets[i] = buckets[i].OrderBy(x => x.Size).ThenBy(y => y.Color).ThenBy(u => u.Fabric).ToList();
+                strategy.SortTshirtDescending(buckets[i]);
+                //buckets[i] = buckets[i].OrderBy(x => x.Size).ThenBy(y => y.Color).ThenBy(u => u.Fabric).ToList();
             }
 
             int index = 0;

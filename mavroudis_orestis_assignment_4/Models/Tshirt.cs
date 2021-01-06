@@ -71,14 +71,16 @@ namespace mavroudis_orestis_assignment_4.Models
 
             ISortStrategy strategy = new QuickSortStrategy();
             string answer;
-            Console.WriteLine("Choose an option (default sorting method is quicksort\n");
+            uint amount;
+            Console.WriteLine("Choose an option\nDefault sorting method is quicksort\nDefault Tshirt list has 5000 entries\n");
             do
             {
                 Console.WriteLine("1)Compare Sorts in miliseconds\n" +
                                   "2)Pick a sorting Algorithm\n" +
                                   "3)Sort with method\n" +
                                   "4)Print tshirt list\n" +
-                                  "5)Exit\n");
+                                  "5)Create new Tshirt list\n" +
+                                  "0)Exit\n");
                 answer = Console.ReadLine();
                 switch (answer)
                 {
@@ -88,28 +90,28 @@ namespace mavroudis_orestis_assignment_4.Models
                     case "2":
                         do
                         {
-                            Console.WriteLine("\nPick one\n" +
+                            Console.WriteLine("\nPick a sorting method\n" +
                                               "1)Quicksort\n" +
                                               "2)Bubblesort\n" +
                                               "3)Bucketsort\n" +
-                                              "4)Back\n");
+                                              "0)Back\n");
                             answer = Console.ReadLine();
                             switch (answer)
                             {
                                 case "1":
                                     strategy = new QuickSortStrategy();
-                                    Console.WriteLine("Strategy set\n");
+                                    Console.WriteLine("Quicksort selected\n");
                                     break;
                                 case "2":
                                     strategy = new BubbleSortStrategy();
-                                    Console.WriteLine("Strategy set\n");
+                                    Console.WriteLine("Bubblesort selected\n");
                                     break;
                                 case "3":
                                     strategy = new BucketSortStrategy();
-                                    Console.WriteLine("Strategy set\n");
+                                    Console.WriteLine("Buckersort selected\n");
                                     break;
                             }
-                        } while (answer != "4");
+                        } while (answer != "0" && answer != "3" && answer != "2" && answer != "1");
                         answer = "";
                         break;
                     case "3":
@@ -124,7 +126,8 @@ namespace mavroudis_orestis_assignment_4.Models
                                               "6)Fabric Descending\n" +
                                               "7)Size-Color-Fabric Ascending\n" +
                                               "8)Size-Color-Fabric Descending\n" +
-                                              "9)Back\n");
+                                              "9)Print Tshirt List\n" +
+                                              "0)Back\n");
                             answer = Console.ReadLine();
                             switch (answer)
                             {
@@ -153,14 +156,22 @@ namespace mavroudis_orestis_assignment_4.Models
                                     strategy.SortTshirtDescending(tshirts);
                                     break;
                             }
-                        } while (answer != "9");
+                        } while (answer != "0");
                         answer = "";
                         break;
                     case "4":
                         PrintList(tshirts);
                         break;
+                    case "5":
+                        Console.WriteLine("Gimme the ammount of Tshirts you want in the list");
+                        do
+                        {
+                            answer = Console.ReadLine();
+                        } while (!uint.TryParse(answer, out amount));
+                        tshirts = Tshirt.GetTshirts((int)amount);
+                        break;
                 }
-            } while (answer != "5");
+            } while (answer != "0");
         }
 
         private static void PrintList(List<Tshirt> tshirts)
