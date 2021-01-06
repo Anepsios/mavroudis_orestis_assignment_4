@@ -11,8 +11,9 @@ namespace mavroudis_orestis_assignment_4.Models
     {
         public void SortSizeAscending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -24,14 +25,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortSizeAscending(buckets[i]);
                 //buckets[i] = buckets[i].OrderBy(x=>x.Size).ToList();
             }
 
             int index = 0;
-            for (int i = 0 ; i < tshirts.Count; i++) 
+            for (int i = 0 ; i < n; i++) 
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -42,8 +43,9 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortSizeDescending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -55,14 +57,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortSizeDescending(buckets[i]);
                 //buckets[i] = buckets[i].OrderByDescending(x => x.Size).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -73,8 +75,9 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortColorAscending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -86,14 +89,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortColorAscending(buckets[i]);
                 //buckets[i] = buckets[i].OrderBy(x => x.Color).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -104,8 +107,9 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortColorDescending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -117,14 +121,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortColorDescending(buckets[i]);
                 //buckets[i] = buckets[i].OrderByDescending(x => x.Color).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -135,8 +139,9 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortFabricAscending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -148,14 +153,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortFabricAscending(buckets[i]);
                 //buckets[i] = buckets[i].OrderBy(x => x.Fabric).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -166,8 +171,9 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortFabricDescending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -179,14 +185,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortFabricDescending(buckets[i]);
                 //buckets[i] = buckets[i].OrderByDescending(x => x.Fabric).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -197,8 +203,9 @@ namespace mavroudis_orestis_assignment_4.Models
         
         public void SortTshirtAscending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -210,14 +217,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortTshirtAscending(buckets[i]);
                 //buckets[i] = buckets[i].OrderBy(x => x.Size).ThenBy(y => y.Color).ThenBy(u => u.Fabric).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {
@@ -228,8 +235,9 @@ namespace mavroudis_orestis_assignment_4.Models
 
         public void SortTshirtDescending(List<Tshirt> tshirts)
         {
-            List<Tshirt>[] buckets = new List<Tshirt>[tshirts.Count];
-            for (int i = 0; i < tshirts.Count; i++)
+            int n = 100;
+            List<Tshirt>[] buckets = new List<Tshirt>[n];
+            for (int i = 0; i < n; i++)
             {
                 buckets[i] = new List<Tshirt>();
             }
@@ -241,14 +249,14 @@ namespace mavroudis_orestis_assignment_4.Models
             }
 
             ISortStrategy strategy = new QuickSortStrategy();
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 strategy.SortTshirtDescending(buckets[i]);
                 //buckets[i] = buckets[i].OrderBy(x => x.Size).ThenBy(y => y.Color).ThenBy(u => u.Fabric).ToList();
             }
 
             int index = 0;
-            for (int i = 0; i < tshirts.Count; i++)
+            for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < buckets[i].Count; j++)
                 {

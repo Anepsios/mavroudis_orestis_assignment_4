@@ -108,7 +108,7 @@ namespace mavroudis_orestis_assignment_4.Models
                                     break;
                                 case "3":
                                     strategy = new BucketSortStrategy();
-                                    Console.WriteLine("Buckersort selected\n");
+                                    Console.WriteLine("Bucketsort selected\n");
                                     break;
                             }
                         } while (answer != "0" && answer != "3" && answer != "2" && answer != "1");
@@ -154,6 +154,9 @@ namespace mavroudis_orestis_assignment_4.Models
                                     break;
                                 case "8":
                                     strategy.SortTshirtDescending(tshirts);
+                                    break;
+                                case "9":
+                                    PrintList(tshirts);
                                     break;
                             }
                         } while (answer != "0");
