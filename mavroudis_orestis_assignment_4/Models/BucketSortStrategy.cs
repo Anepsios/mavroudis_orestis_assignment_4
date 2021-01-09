@@ -59,7 +59,7 @@ namespace mavroudis_orestis_assignment_4.Models
 
             for (int i = 0; i < tshirts.Count; i++)
             {
-                int bucket = (int)tshirts[i].Size;
+                int bucket = ((int)Enum.GetNames(typeof(Size)).Length - 1) - (int)tshirts[i].Size;
                 buckets[bucket].Add(tshirts[i]);
             }
 
@@ -129,7 +129,7 @@ namespace mavroudis_orestis_assignment_4.Models
 
             for (int i = 0; i < tshirts.Count; i++)
             {
-                int bucket = (int)tshirts[i].Color;
+                int bucket = ((int)Enum.GetNames(typeof(Color)).Length - 1) - (int)tshirts[i].Color;
                 buckets[bucket].Add(tshirts[i]);
             }
 
@@ -199,7 +199,7 @@ namespace mavroudis_orestis_assignment_4.Models
 
             for (int i = 0; i < tshirts.Count; i++)
             {
-                int bucket = (int)tshirts[i].Fabric;
+                int bucket = ((int)Enum.GetNames(typeof(Fabric)).Length - 1) - (int)tshirts[i].Fabric;
                 buckets[bucket].Add(tshirts[i]);
             }
 
@@ -269,7 +269,7 @@ namespace mavroudis_orestis_assignment_4.Models
 
             for (int i = 0; i < tshirts.Count; i++)
             {
-                int bucket = (int)tshirts[i].Size;
+                int bucket = ((int)Enum.GetNames(typeof(Size)).Length - 1) - (int)tshirts[i].Size;
                 buckets[bucket].Add(tshirts[i]);
             }
 
